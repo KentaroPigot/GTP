@@ -1,0 +1,68 @@
+a {
+  transition: all 0.15s ease;
+}
+
+#app {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* text-yellow-500 */
+a:hover {
+  color: #f59e0b;
+  text-decoration: none;
+}
+
+.text-orange {
+  color: #f59e0b !important;
+  fill: #f59e0b !important;
+}
+
+.card-header .fa.text-orange,
+.card .card-header .fas.text-orange {
+  color: #ff5e3a;
+  fill: #ff5e3a;
+}
+
+.introduction-bg {
+  animation: slide 50s linear infinite;
+  will-change: background-position;
+  z-index: -1;
+}
+
+input[type='file'] {
+  margin-top: 20px;
+}
+
+.router-link-exact-active {
+  font-size: 1rem;
+  color: #1d3557 !important;
+  text-decoration: none;
+  position: relative !important;
+  background-color: white !important;
+}
+
+.router-link-exact-active::after,
+.router-link-exact-active::before {
+  --border-radius: 1em;
+
+  content: '';
+  position: absolute;
+  height: var(--border-radius);
+  width: var(--border-radius);
+  bottom: 0;
+  background-color: #1d3557;
+  z-index: -1;
+}
+
+.router-link-exact-active::before {
+  left: calc(var(--border-radius) * -1);
+  border-radius: 0 0 100vw 0;
+  box-shadow: 5px 5px 0 5px white;
+}
+.router-link-exact-active::after {
+  right: calc(var(--border-radius) * -1);
+  border-radius: 0 0 0 100vw;
+  box-shadow: -5px 5px 0 5px white;
+}
